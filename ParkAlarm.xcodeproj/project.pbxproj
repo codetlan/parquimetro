@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC1EFA1D17E6AE1200DBB53D /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = BC1EFA1C17E6AE1200DBB53D /* camera.png */; };
+		BC1EFA1F17E6C0F300DBB53D /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC1EFA1E17E6C0F300DBB53D /* bg.jpg */; };
 		BC7A69CA17E651F3008771FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7A69C917E651F3008771FD /* Foundation.framework */; };
 		BC7A69CC17E651F3008771FD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7A69CB17E651F3008771FD /* CoreGraphics.framework */; };
 		BC7A69CE17E651F3008771FD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7A69CD17E651F3008771FD /* UIKit.framework */; };
@@ -21,6 +23,8 @@
 		BC7A69EB17E651F4008771FD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7A69CD17E651F3008771FD /* UIKit.framework */; };
 		BC7A69F317E651F4008771FD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BC7A69F117E651F4008771FD /* InfoPlist.strings */; };
 		BC7A69F517E651F4008771FD /* ParkAlarmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7A69F417E651F4008771FD /* ParkAlarmTests.m */; };
+		BC7A69FF17E65778008771FD /* sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = BC7A69FE17E65778008771FD /* sound.caf */; };
+		BC7A6A0117E65A0B008771FD /* chrome.png in Resources */ = {isa = PBXBuildFile; fileRef = BC7A6A0017E65A0B008771FD /* chrome.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BC1EFA1C17E6AE1200DBB53D /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
+		BC1EFA1E17E6C0F300DBB53D /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
 		BC7A69C617E651F3008771FD /* ParkAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC7A69C917E651F3008771FD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BC7A69CB17E651F3008771FD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +59,8 @@
 		BC7A69F017E651F4008771FD /* ParkAlarmTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ParkAlarmTests-Info.plist"; sourceTree = "<group>"; };
 		BC7A69F217E651F4008771FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BC7A69F417E651F4008771FD /* ParkAlarmTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParkAlarmTests.m; sourceTree = "<group>"; };
+		BC7A69FE17E65778008771FD /* sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sound.caf; sourceTree = "<group>"; };
+		BC7A6A0017E65A0B008771FD /* chrome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chrome.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +134,10 @@
 		BC7A69D017E651F4008771FD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BC1EFA1E17E6C0F300DBB53D /* bg.jpg */,
+				BC1EFA1C17E6AE1200DBB53D /* camera.png */,
+				BC7A6A0017E65A0B008771FD /* chrome.png */,
+				BC7A69FE17E65778008771FD /* sound.caf */,
 				BC7A69D117E651F4008771FD /* ParkAlarm-Info.plist */,
 				BC7A69D217E651F4008771FD /* InfoPlist.strings */,
 				BC7A69D517E651F4008771FD /* main.m */,
@@ -228,9 +240,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC1EFA1D17E6AE1200DBB53D /* camera.png in Resources */,
 				BC7A69E217E651F4008771FD /* Images.xcassets in Resources */,
+				BC7A69FF17E65778008771FD /* sound.caf in Resources */,
 				BC7A69D417E651F4008771FD /* InfoPlist.strings in Resources */,
 				BC7A69DD17E651F4008771FD /* Main.storyboard in Resources */,
+				BC7A6A0117E65A0B008771FD /* chrome.png in Resources */,
+				BC1EFA1F17E6C0F300DBB53D /* bg.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,10 +394,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ParkAlarm/ParkAlarm-Prefix.pch";
 				INFOPLIST_FILE = "ParkAlarm/ParkAlarm-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -391,10 +411,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ParkAlarm/ParkAlarm-Prefix.pch";
 				INFOPLIST_FILE = "ParkAlarm/ParkAlarm-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -460,6 +484,7 @@
 				BC7A69FA17E651F4008771FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC7A69FB17E651F4008771FD /* Build configuration list for PBXNativeTarget "ParkAlarmTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +493,7 @@
 				BC7A69FD17E651F4008771FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
