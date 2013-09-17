@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "Tesseract.h"
 
 @interface ViewController ()
 
@@ -36,11 +37,26 @@
     
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
     self.imageView.image = chosenImage;
-    self.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    //self.imageView.contentMode = UIViewContentModeScaleAspectFit;
     //self.imageView.contentMode = UIViewContentModeScaleAspectFill;
     self.imageView.contentMode = UIViewContentModeScaleToFill;
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
+    
+    
+    Tesseract* tesseract = [[Tesseract alloc] initWithDataPath:@"tessdata" language:@"eng"];
+    [tesseract setVariableValue:@"0123456789" forKey:@"tessedit_char_whitelist"];
+    //[tesseract setImage:[UIImage imageNamed:@"numbers.jpg"]];
+    
+    [tesseract setImage: chosenImage];
+    [tesseract recognize];    
+    //NSLog(@"%@", [tesseract recognizedText]);
+    
+    [self showAlert:[tesseract recognizedText]];
+    
+    [tesseract clear];
+    
+    
     
 }
 
