@@ -36,16 +36,34 @@
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
-    self.imageView.image = chosenImage;
-    //self.imageView.contentMode = UIViewContentModeScaleAspectFit;
-    //self.imageView.contentMode = UIViewContentModeScaleAspectFill;
+    
+    CGFloat brightness = 0.98;
+    
+    UIGraphicsBeginImageContext(chosenImage.size);
+    CGRect imageRect = CGRectMake(0, 0, chosenImage.size.width, chosenImage.size.height);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    // Original image
+    [chosenImage drawInRect:imageRect];
+    
+    // Brightness overlay
+    CGContextSetFillColorWithColor(context, [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:brightness].CGColor);
+    CGContextAddRect(context, imageRect);
+    CGContextFillPath(context);
+    
+    UIImage* resultImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    
+    //la ponemos en la vista
+    self.imageView.image = resultImage;
     self.imageView.contentMode = UIViewContentModeScaleToFill;
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
     
     Tesseract* tesseract = [[Tesseract alloc] initWithDataPath:@"tessdata" language:@"eng"];
-    [tesseract setVariableValue:@"0123456789" forKey:@"tessedit_char_whitelist"];
+    [tesseract setVariableValue:@"17:06" forKey:@"tessedit_char_whitelist"];
     //[tesseract setImage:[UIImage imageNamed:@"numbers.jpg"]];
     
     [tesseract setImage: chosenImage];

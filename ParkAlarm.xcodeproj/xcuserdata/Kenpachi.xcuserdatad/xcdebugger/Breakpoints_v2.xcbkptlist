@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ParkAlarm/ViewController.m"
-            timestampString = "401094388.341752"
+            timestampString = "401325730.514372"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
             landmarkName = "@implementation ViewController"
             landmarkType = "3">
          </BreakpointContent>
