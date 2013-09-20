@@ -25,6 +25,12 @@
 		BC7A69F517E651F4008771FD /* ParkAlarmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7A69F417E651F4008771FD /* ParkAlarmTests.m */; };
 		BC7A69FF17E65778008771FD /* sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = BC7A69FE17E65778008771FD /* sound.caf */; };
 		BC7A6A0117E65A0B008771FD /* chrome.png in Resources */ = {isa = PBXBuildFile; fileRef = BC7A6A0017E65A0B008771FD /* chrome.png */; };
+		BC86E8E217EBC82F00CA792E /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC37116417EBC3A500363F3A /* libGPUImage.a */; };
+		BC86E8E417EBC84C00CA792E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC86E8E317EBC84C00CA792E /* CoreMedia.framework */; };
+		BC86E8E617EBC86200CA792E /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC86E8E517EBC86200CA792E /* CoreVideo.framework */; };
+		BC86E8E817EBC86B00CA792E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC86E8E717EBC86B00CA792E /* OpenGLES.framework */; };
+		BC86E8EA17EBC87200CA792E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC86E8E917EBC87200CA792E /* AVFoundation.framework */; };
+		BC86E8EC17EBC87A00CA792E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC86E8EB17EBC87A00CA792E /* QuartzCore.framework */; };
 		BC985F2D17E821A0003A0158 /* liblept.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC985F2917E821A0003A0158 /* liblept.a */; };
 		BC985F2E17E821A1003A0158 /* libtesseract_all.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC985F2A17E821A0003A0158 /* libtesseract_all.a */; };
 		BC985F2F17E821A1003A0158 /* Tesseract.mm in Sources */ = {isa = PBXBuildFile; fileRef = BC985F2C17E821A0003A0158 /* Tesseract.mm */; };
@@ -33,6 +39,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		BC37116317EBC3A500363F3A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC37115D17EBC3A400363F3A /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCF1A33414DDB1EC00852800;
+			remoteInfo = GPUImage;
+		};
+		BC37116517EBC3A500363F3A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC37115D17EBC3A400363F3A /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCF1A34414DDB1EC00852800;
+			remoteInfo = GPUImageTests;
+		};
+		BC37116717EBC3FD00363F3A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC37115D17EBC3A400363F3A /* GPUImage.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BCF1A33314DDB1EC00852800;
+			remoteInfo = GPUImage;
+		};
 		BC7A69EC17E651F4008771FD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BC7A69BE17E651F3008771FD /* Project object */;
@@ -45,6 +72,7 @@
 /* Begin PBXFileReference section */
 		BC1EFA1C17E6AE1200DBB53D /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
 		BC1EFA1E17E6C0F300DBB53D /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
+		BC37115D17EBC3A400363F3A /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = submodules/GPUImage/framework/GPUImage.xcodeproj; sourceTree = "<group>"; };
 		BC7A69C617E651F3008771FD /* ParkAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC7A69C917E651F3008771FD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BC7A69CB17E651F3008771FD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -66,6 +94,11 @@
 		BC7A69F417E651F4008771FD /* ParkAlarmTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParkAlarmTests.m; sourceTree = "<group>"; };
 		BC7A69FE17E65778008771FD /* sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sound.caf; sourceTree = "<group>"; };
 		BC7A6A0017E65A0B008771FD /* chrome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chrome.png; sourceTree = "<group>"; };
+		BC86E8E317EBC84C00CA792E /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		BC86E8E517EBC86200CA792E /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		BC86E8E717EBC86B00CA792E /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		BC86E8E917EBC87200CA792E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		BC86E8EB17EBC87A00CA792E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		BC985E9817E821A0003A0158 /* allheaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = allheaders.h; sourceTree = "<group>"; };
 		BC985E9917E821A0003A0158 /* alltypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = alltypes.h; sourceTree = "<group>"; };
 		BC985E9A17E821A0003A0158 /* array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = array.h; sourceTree = "<group>"; };
@@ -222,6 +255,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC86E8EC17EBC87A00CA792E /* QuartzCore.framework in Frameworks */,
+				BC86E8EA17EBC87200CA792E /* AVFoundation.framework in Frameworks */,
+				BC86E8E817EBC86B00CA792E /* OpenGLES.framework in Frameworks */,
+				BC86E8E617EBC86200CA792E /* CoreVideo.framework in Frameworks */,
+				BC86E8E417EBC84C00CA792E /* CoreMedia.framework in Frameworks */,
+				BC86E8E217EBC82F00CA792E /* libGPUImage.a in Frameworks */,
 				BC985F2D17E821A0003A0158 /* liblept.a in Frameworks */,
 				BC7A69CC17E651F3008771FD /* CoreGraphics.framework in Frameworks */,
 				BC985F2E17E821A1003A0158 /* libtesseract_all.a in Frameworks */,
@@ -243,9 +282,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC37115E17EBC3A400363F3A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC37116417EBC3A500363F3A /* libGPUImage.a */,
+				BC37116617EBC3A500363F3A /* GPUImageTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		BC7A69BD17E651F3008771FD = {
 			isa = PBXGroup;
 			children = (
+				BC37115D17EBC3A400363F3A /* GPUImage.xcodeproj */,
 				BC7A69CF17E651F4008771FD /* ParkAlarm */,
 				BC7A69EE17E651F4008771FD /* ParkAlarmTests */,
 				BC7A69C817E651F3008771FD /* Frameworks */,
@@ -265,6 +314,11 @@
 		BC7A69C817E651F3008771FD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BC86E8EB17EBC87A00CA792E /* QuartzCore.framework */,
+				BC86E8E917EBC87200CA792E /* AVFoundation.framework */,
+				BC86E8E717EBC86B00CA792E /* OpenGLES.framework */,
+				BC86E8E517EBC86200CA792E /* CoreVideo.framework */,
+				BC86E8E317EBC84C00CA792E /* CoreMedia.framework */,
 				BC7A69C917E651F3008771FD /* Foundation.framework */,
 				BC7A69CB17E651F3008771FD /* CoreGraphics.framework */,
 				BC7A69CD17E651F3008771FD /* UIKit.framework */,
@@ -515,6 +569,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				BC37116817EBC3FD00363F3A /* PBXTargetDependency */,
 			);
 			name = ParkAlarm;
 			productName = ParkAlarm;
@@ -564,6 +619,12 @@
 			mainGroup = BC7A69BD17E651F3008771FD;
 			productRefGroup = BC7A69C717E651F3008771FD /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BC37115E17EBC3A400363F3A /* Products */;
+					ProjectRef = BC37115D17EBC3A400363F3A /* GPUImage.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				BC7A69C517E651F3008771FD /* ParkAlarm */,
@@ -571,6 +632,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		BC37116417EBC3A500363F3A /* libGPUImage.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libGPUImage.a;
+			remoteRef = BC37116317EBC3A500363F3A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC37116617EBC3A500363F3A /* GPUImageTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GPUImageTests.octest;
+			remoteRef = BC37116517EBC3A500363F3A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		BC7A69C417E651F3008771FD /* Resources */ = {
@@ -622,6 +700,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		BC37116817EBC3FD00363F3A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GPUImage;
+			targetProxy = BC37116717EBC3FD00363F3A /* PBXContainerItemProxy */;
+		};
 		BC7A69ED17E651F4008771FD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BC7A69C517E651F3008771FD /* ParkAlarm */;
@@ -739,6 +822,11 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ParkAlarm/ParkAlarm-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"Submodules/GPUImage/framework/**",
+				);
 				INFOPLIST_FILE = "ParkAlarm/ParkAlarm-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
@@ -761,6 +849,11 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ParkAlarm/ParkAlarm-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"Submodules/GPUImage/framework/**",
+				);
 				INFOPLIST_FILE = "ParkAlarm/ParkAlarm-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
