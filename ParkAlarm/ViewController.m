@@ -34,7 +34,6 @@
     UIGraphicsBeginImageContext(f.size);
     CGContextRef context = UIGraphicsGetCurrentContext();
     
-    //[[UIColor colorWithRed:255/255.0f green:204/255.0f blue:0/255.0f alpha:1] set];
     [[UIColor colorWithRed:108/255.0f green:256/255.0f blue:0/255.0f alpha:1.0f] set];
     CGRect rectangle = CGRectMake(50, 100, 220, 150);
     CGContextStrokeRect(context, rectangle);
@@ -43,9 +42,8 @@
         
     UIImageView *overlayIV = [[UIImageView alloc] initWithFrame:f];
     overlayIV.image = overlayImage;
-    [picker.cameraOverlayView addSubview:overlayIV];
+    picker.cameraOverlayView = overlayIV ;
     //finish overlay
-    
    
     picker.delegate = self;
     picker.allowsEditing = YES;
@@ -74,7 +72,7 @@
     GPUImageColorInvertFilter *colorInvertFilter;
     colorInvertFilter = [[GPUImageColorInvertFilter alloc] init];
     
-    GPUImageCropFilter *cropFilter = [[GPUImageCropFilter alloc] initWithCropRegion:CGRectMake(0.15f, 0.4f, 0.75f, .48f)];
+    GPUImageCropFilter *cropFilter = [[GPUImageCropFilter alloc] initWithCropRegion:CGRectMake(0.18f, 0.24f, 0.65f, .48f)];
     
     filteredImage = [cropFilter imageByFilteringImage:filteredImage];
     
@@ -89,26 +87,19 @@
     filteredImage = [colorInvertFilter imageByFilteringImage:filteredImage];
     
     
+    //le sacamos el texto del la imagen
+    Tesseract* tesseract = [[Tesseract alloc] initWithDataPath:@"tessdata" language:@"eng"];
+    [tesseract setImage: filteredImage ];
+    [tesseract recognize];
+    [self showAlert:[tesseract recognizedText]];
+    [tesseract clear];
     
     //la ponemos en la vista
-    self.imageView.image = filteredImage;
-    //self.imageView.contentMode = UIViewContentModeScaleToFill;
-    self.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    self.imageView.image = chosenImage;
+    self.imageView.contentMode = UIViewContentModeScaleToFill;
     
-    [picker dismissViewControllerAnimated:YES completion:NULL];
+    [picker dismissViewControllerAnimated:YES completion:NULL];   
     
-    
-   Tesseract* tesseract = [[Tesseract alloc] initWithDataPath:@"tessdata" language:@"eng"];
-    //[tesseract setVariableValue:@"0123456789" forKey:@"tessedit_char_whitelist"];
-    //[tesseract setImage:[UIImage imageNamed:@"numbers.jpg"]];
-    
-    [tesseract setImage: filteredImage ];
-    [tesseract recognize];    
-    //NSLog(@"%@", [tesseract recognizedText]);
-    
-    [self showAlert:[tesseract recognizedText]];
-    
-    [tesseract clear];
 }
 
 -(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
