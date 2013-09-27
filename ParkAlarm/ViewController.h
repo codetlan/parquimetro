@@ -17,7 +17,7 @@
 
 -(IBAction)takePhoto:(id)sender;
 
--(void) showAlert: (NSString *) message;
+-(void) showAlert: (NSString *) message withArg2:(NSString *)title;
 -(void) scheduleLocalNotificationWithDate: (NSDate *) fireDate;
 -(IBAction)alarmSetButtonTapped:(id)sender;
 -(IBAction)alarmCancelButtonTapped:(id)sender;
