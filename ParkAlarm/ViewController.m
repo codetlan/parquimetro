@@ -66,7 +66,7 @@
     //BrightnessFilter
     GPUImageBrightnessFilter *brightnessFilter;
     brightnessFilter = [[GPUImageBrightnessFilter alloc] init];
-    [brightnessFilter setBrightness:0.5];
+    [brightnessFilter setBrightness:0.6];
     
     //ColorInvertFilter
     GPUImageColorInvertFilter *colorInvertFilter;
